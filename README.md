@@ -164,7 +164,7 @@ SEL-Benchmark/
 |-- assets/                            # Images and visual outputs
 |   |-- benchmark_results.png          # Full 14-panel benchmark visualization
 |
-|-- web/                               # Interactive results page
+|-- docs/                              # Interactive results page (GitHub Pages)
 |   |-- index.html                     # Self-contained HTML with Chart.js visualizations
 |
 |-- .gitignore                         # Python-specific ignore rules
@@ -290,14 +290,14 @@ per_class_acc, overall_acc = eval_per_class(model, held_out)
 
 ### Viewing the Interactive Results Page
 
-The `web/index.html` file is a self-contained, zero-dependency page (uses Chart.js from CDN) that visualizes all benchmark results interactively.
+The `docs/index.html` file is a self-contained, zero-dependency page (uses Chart.js from CDN) that visualizes all benchmark results interactively.
 
 ```bash
 # Option 1: Open directly in browser
-# Just double-click web/index.html
+# Just double-click docs/index.html
 
 # Option 2: Serve locally
-python -m http.server 8765 --directory web
+python -m http.server 8765 --directory docs
 # Then open http://localhost:8765 in your browser
 ```
 

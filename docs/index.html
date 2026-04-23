@@ -86,6 +86,38 @@
 
   .nav-links a:hover { color: var(--text); }
 
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-gh {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    transition: all 0.25s;
+  }
+
+  .nav-gh:hover {
+    border-color: var(--accent);
+    color: var(--text);
+    background: var(--glow);
+  }
+
+  .nav-gh svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+  }
+
   /* HERO */
   .hero {
     min-height: 100vh;
@@ -153,9 +185,42 @@
     color: var(--muted);
     max-width: 560px;
     line-height: 1.8;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     opacity: 0;
     animation: fadeUp 0.6s 0.6s forwards;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), #5b4cd9);
+    border: 1px solid rgba(124,106,255,0.4);
+    box-shadow: 0 0 20px rgba(124,106,255,0.25), 0 0 60px rgba(124,106,255,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.7s forwards;
+  }
+
+  .hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(124,106,255,0.4), 0 0 80px rgba(124,106,255,0.15);
+    background: linear-gradient(135deg, #8b7aff, #6b5ae0);
+  }
+
+  .hero-cta svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
   }
 
   .hero-stats {
@@ -801,6 +866,7 @@
     footer { flex-direction: column; }
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
+    .hero-cta { font-size: 0.72rem; padding: 0.65rem 1.3rem; }
   }
 </style>
 </head>
@@ -808,12 +874,18 @@
 
 <nav>
   <div class="nav-logo">SEL // Staged Embarrassment Learning</div>
-  <ul class="nav-links">
-    <li><a href="#origin">Origin</a></li>
-    <li><a href="#concept">Concept</a></li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#applications">Applications</a></li>
-  </ul>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#origin">Origin</a></li>
+      <li><a href="#concept">Concept</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#applications">Applications</a></li>
+    </ul>
+    <a href="https://github.com/ishaaqdev/Staged-Embarrassment-Learning" target="_blank" class="nav-gh">
+      <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      GitHub
+    </a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -828,6 +900,11 @@
   <p class="hero-sub">
     A curriculum-based training method that applies dynamic gradient sparsity -- letting a neural network focus its compute on the samples it finds most embarrassing to get wrong.
   </p>
+
+  <a href="https://github.com/ishaaqdev/Staged-Embarrassment-Learning" target="_blank" class="hero-cta">
+    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+    View on GitHub
+  </a>
 
   <div class="hero-stats">
     <div class="stat">

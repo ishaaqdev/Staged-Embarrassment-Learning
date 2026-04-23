@@ -9,6 +9,9 @@
 ![Architecture](https://img.shields.io/badge/Model-ResNet--18-4A90D9?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Research_Complete-blueviolet?style=flat-square)
+[![Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-222?style=flat-square&logo=github&logoColor=white)](https://ishaaqdev.github.io/Staged-Embarrassment-Learning/)
+
+**[View Interactive Results Page](https://ishaaqdev.github.io/Staged-Embarrassment-Learning/)**
 
 ---
 
